@@ -1,0 +1,154 @@
+/*Border box instead of standard box model https://css-tricks.com/international-box-sizing-awareness-day/ */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/*Fullscreen responsive image background*/
+html {
+    visibility:hidden;
+    height: 100%;
+    background: url('bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover; 
+}
+
+.flex-container{
+    position: fixed;
+    left: 10%;
+    right: 10%;
+    top: 0px;
+    bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.sub-container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.fonta{
+    font-family: 'Merriweather', serif;
+    color: white;
+    font-size: small;
+}
+
+.bg-black{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 10px 5px;
+}
+
+.margin{
+    margin-top: 10px;
+}
+
+#quote-btn{
+    font-family: 'Ubuntu', sans-serif;
+    border: 0;
+    outline: none;
+    background-color: #ff0000;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#quote-btn:hover, #submit:hover{
+    background-color: #ff3333;
+
+}
+
+#quote-btn:active{
+    background-color: #ff6666;
+}
+
+#name{
+    text-align: left;
+    width: 166px;
+}
+
+#submit{
+    font-family: 'Ubuntu', sans-serif;
+    border: 0;
+    outline: none;
+    background-color: red;
+    padding: 2px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#quote{
+    display: none;
+}   
+
+footer{
+    position: fixed;
+    bottom: 15px;
+}
+
+#popup{
+    display: inline-block;
+    display: none;
+    width: 200px;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 140%;
+    left: -50px;
+    background-color: #666666;
+    padding: 10px 10px;
+}
+
+#popup-text{
+    text-align: left;
+}
+
+#close-btn{
+    display:  inline-block;
+    position: absolute;
+    padding: 5px 5px;
+    border-radius: 50%;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+}
+
+#info{
+    color: grey;
+    padding: 0 10px;
+}
+
+#info:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#mail{
+    color: grey;
+    padding: 0 10px;
+}
+
+#mail:hover{
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 800px)  {
+    .flex-container{
+        left: 25%;
+        right: 25%;
+    }
+}
+
+@media only screen and (min-width: 1200px)  {
+    .flex-container{
+        left: 35%;
+        right: 35%;
+    }
+}
