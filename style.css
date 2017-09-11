@@ -6,7 +6,8 @@
     text-align: center;
 }
 
-/*Fullscreen responsive image background*/
+/*Fullscreen responsive image background. background-size: cover
+doesn't work properly on Android, but it worked after adding height: 100% */
 html {
     visibility:hidden;
     height: 100%;
